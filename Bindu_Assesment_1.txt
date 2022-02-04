@@ -1,0 +1,184 @@
+code1
+import java.util.Scanner;
+public class equalnotequal {
+    public static void main(String[] args)
+    {
+    int input1,input2,input3,input4;
+    Scanner input=new Scanner(System.in);
+    System.out.print("Input first number: ");
+    input1=input.nextInt();
+    System.out.print("Input second number: ");
+    input2=input.nextInt();
+    System.out.print("Input third number: ");
+    input3=input.nextInt();
+    System.out.print("Input fourth number: ");
+    input4=input.nextInt();
+    if(input1==input2 && input2==input3 && input3==input4)
+    {
+        System.out.println("Numbers are equal!");//If all 4 numbers are equal
+    }
+    else
+    {
+        System.out.println("Numbers are not equal!");//If numbers are not equal
+    }
+    }
+}
+
+
+code2
+import java.util.Scanner;
+public class strictly01 {
+    public static void main(String[] args)
+    {
+        double input1,input2;
+        Scanner input=new Scanner(System.in);
+        System.out.print("Input first number: ");
+        input1=input.nextDouble();
+        System.out.print("Input second number: ");
+        input2=input.nextDouble();
+        if(input1>0 && input1<1 && input2>0 && input2<1){
+            System.out.println("true");//If input1 and input2 are strictly between 0 and 1
+        }
+        else {
+            System.out.println("false");//If input1 and input2 are not between 0 and 1
+        }
+    }
+}
+
+
+code3
+public class truefalse {
+    public static void main(String[] args){
+        String A[][]={{"TRUE","FALSE","TRUE"},{"FALSE","TRUE","FALSE"}};//String matrix
+        for(int i=0;i<2;i++){
+            for(int j=0;j<3;j++){
+                if(A[i][j] == "TRUE")
+                System.out.print('t'+ " ");//If the string is TRUE replace it by 't'
+                else
+                System.out.print('f'+ " ");//If the string is FALSE replace it by 'f'
+            }
+            System.out.println("");//to print a newline
+        }
+    }
+}
+
+
+code4
+import java.util.Scanner;
+public class rowcolumn {
+    
+    public static void main(String[] args){
+        int row,col,i,j;
+        Scanner input=new Scanner(System.in);
+        System.out.print("Enter number of rows: ");
+        row=input.nextInt();
+        System.out.print("Enter number of columns: ");
+        col=input.nextInt();
+        int A[][] = new int[row][col];
+        System.out.print("Enter Elements of matrix: ");
+        for(i=0;i<row; i++)
+        {
+            for(j=0;j<col;j++){
+                A[i][j] = input.nextInt();
+            }
+        }
+        System.out.print("Original Array: ");
+        for(i=0;i<row; i++)
+        {
+            for(j=0;j<col;j++){
+                System.out.print(A[i][j] +" ");
+            }
+            System.out.println();
+        }
+        int B[][] = new int[col][row]; //matrix to store transpose elements
+        for(i=0;i<col; i++)
+        {
+            for(j=0;j<row;j++){
+                B[i][j] = A[j][i];//interchange elements in rows and columns
+            }
+        }
+        System.out.print("After changing the rows nd columns of the said array: ");
+        for(i=0;i<col; i++)
+        {
+            for(j=0;j<row;j++){
+                System.out.print(B[i][j] +" ");
+            }
+            System.out.println(); //print the new changed matrix
+        }
+    }
+}
+
+
+code5
+import java.util.Scanner;
+public class Klargest {
+    void sortedarray(int A[],int num){//method to sort the elements of the array in descending order
+        for(int i=0;i<num-1;i++){
+            for(int j=0;j<num-i-1;j++){
+                if(A[j] < A[j+1])
+                {
+                    int temp = A[j];
+                    A[j] = A[j+1];
+                    A[j+1] = temp;
+                }
+            }
+        }
+    }
+    public static void main(String[] args){
+        Klargest kl = new Klargest();
+        int num,i,k;
+        Scanner input=new Scanner(System.in);
+        System.out.print("Enter number of elements in the array: ");
+        num=input.nextInt();
+        int A[] = new int[num];
+        System.out.print("Enter elements of array: ");
+        for(i=0;i<num; i++)
+        {
+                A[i] = input.nextInt();
+        }
+        System.out.println("Original Array: ");
+        for(i=0;i<num; i++)
+        {
+            System.out.print(A[i] +" ");//print the original array
+        }
+        kl.sortedarray(A, num);
+        /*System.out.println("Sorted Array: ");
+        for(i=0;i<num; i++)
+        {
+            System.out.print(A[i] +" ");
+        }*/
+        System.out.println();
+        System.out.print("Enter value of k: ");
+        k=input.nextInt();
+        System.out.print(k+" largest elements of the said array:");
+        for(i=0;i<k; i++)
+        {
+            System.out.print(A[i] +" "); print the first k elements from the sorted array
+        }
+}
+}
+
+
+code6
+import java.util.Scanner;
+public class binary{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input first number: ");
+        int number = input.nextInt();
+        int i=0,j;
+        System.out.println("Binary Representation of "+ number + " is: " + Integer.toBinaryString(number));//method to convert integer into its String binary form 
+        int zcount = 0;
+        int n = number;
+        while(n>=1) {
+            if(n %2 == 0) //check if the bit is 0 and then increment the zcount 
+            {
+                zcount++;
+            }
+            n=n/2;
+        }
+        System.out.println("Number of zero bits in "+ number + " is: " + zcount); 
+}
+}
+
+ 
