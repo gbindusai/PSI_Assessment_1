@@ -1,4 +1,4 @@
-code1
+//code1
 import java.util.Scanner;
 public class equalnotequal {
     public static void main(String[] args)
@@ -25,7 +25,7 @@ public class equalnotequal {
 }
 
 
-code2
+//code2
 import java.util.Scanner;
 public class strictly01 {
     public static void main(String[] args)
@@ -46,7 +46,7 @@ public class strictly01 {
 }
 
 
-code3
+//code3
 public class truefalse {
     public static void main(String[] args){
         String A[][]={{"TRUE","FALSE","TRUE"},{"FALSE","TRUE","FALSE"}};//String matrix
@@ -63,7 +63,7 @@ public class truefalse {
 }
 
 
-code4
+//code4
 import java.util.Scanner;
 public class rowcolumn {
     
@@ -109,7 +109,7 @@ public class rowcolumn {
 }
 
 
-code5
+//code5
 import java.util.Scanner;
 public class Klargest {
     void sortedarray(int A[],int num){//method to sort the elements of the array in descending order
@@ -159,7 +159,7 @@ public class Klargest {
 }
 
 
-code6
+//code6
 import java.util.Scanner;
 public class binary{
     public static void main(String[] args){
